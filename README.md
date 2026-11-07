@@ -2,7 +2,7 @@
 
 A Python data-analysis project exploring NBA player statistics across the 2000–2009 seasons. The analysis uses **Pandas** to filter player-season records, calculate a custom player-value score, and identify the highest-scoring team in each season.
 
-> **Dataset note:** The original `NBA2000-2009.csv` input file was not included in the supplied project archive. The repository contains the analysis code and the three CSV result files supplied with the project. To reproduce the analysis, obtain the source dataset separately, verify its redistribution terms, and place it in `data/NBA2000-2009.csv`.
+> **Dataset note:** The original `NBA2000-2009.csv` input file was not included in the supplied project archive. The repository contains the analysis code, notebook, and one reference result file. To reproduce all analyses, obtain the source dataset separately, verify its redistribution terms, and place it in `data/NBA2000-2009.csv`.
 
 ## Analyses
 
@@ -44,8 +44,6 @@ Sums the player scoring averages (`PTS`) for each team in each season and select
 ├── notebooks/
 │   └── NBA_Analysis.ipynb
 ├── outputs/
-│   ├── best_player.csv
-│   ├── double_double.csv
 │   └── max_PTS_of_year.csv
 ├── nba_analysis.py
 ├── requirements.txt
@@ -80,26 +78,25 @@ To specify a different input path or output directory:
 python nba_analysis.py --input path/to/NBA2000-2009.csv --output-dir outputs
 ```
 
-The script writes:
+The script generates three CSV reports in the output directory:
 
-- `outputs/double_double.csv`
-- `outputs/best_player.csv`
-- `outputs/max_PTS_of_year.csv`
+- `double_double.csv`
+- `best_player.csv`
+- `max_PTS_of_year.csv`
+
+An example/reference team-scoring output from the supplied project archive is included as `outputs/max_PTS_of_year.csv`. It has not been independently regenerated because the raw input dataset was not supplied.
 
 ## Notebook
 
 An optional Jupyter notebook is available at `notebooks/NBA_Analysis.ipynb`. Install Jupyter separately with `pip install notebook`, then launch it from the repository root with `jupyter notebook`. The notebook calls the same functions as the Python script.
-
-## Included result files
-
-The `outputs/` directory contains the result CSV files supplied with the original project archive. They are provided as reference outputs; the original input dataset was not included, so these files have not been independently regenerated from the raw source data in this repository.
 
 ## Limitations
 
 - The player-value formula is a custom scoring rule defined for this analysis. It should not be interpreted as an official measure of player quality.
 - The analysis aggregates season-level player averages as specified in the original project; it does not normalize by games played or playing time.
 - Results are limited to the data represented in the source dataset.
+- The original source dataset is not included, so the full workflow cannot run until the user obtains and supplies that file.
 
 ## License and data provenance
 
-No software license has been specified. The original source dataset was not supplied with the project. Confirm its provenance and redistribution terms before adding it to this repository.
+No software license has been specified. The original source dataset was not supplied with the project. Confirm its provenance and redistribution terms before adding the raw file to this repository.
