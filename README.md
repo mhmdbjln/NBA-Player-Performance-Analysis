@@ -2,7 +2,7 @@
 
 A Python data-analysis project exploring NBA player statistics across the 2000–2009 seasons. The analysis uses **Pandas** to filter player-season records, calculate a custom player-value score, and identify the highest-scoring team in each season.
 
-> **Dataset note:** The original `NBA2000-2009.csv` input file was not included in the supplied project archive. The repository contains the analysis code, notebook, and one reference result file. To reproduce all analyses, obtain the source dataset separately, verify its redistribution terms, and place it in `data/NBA2000-2009.csv`.
+> **Dataset note:** The original `NBA2000-2009.csv` input file was not included in the supplied project archive. The repository contains the analysis code, notebook, and two reference result files. To reproduce all analyses, obtain the source dataset separately, verify its redistribution terms, and place it in `data/NBA2000-2009.csv`.
 
 ## Analyses
 
@@ -44,6 +44,7 @@ Sums the player scoring averages (`PTS`) for each team in each season and select
 ├── notebooks/
 │   └── NBA_Analysis.ipynb
 ├── outputs/
+│   ├── double_double.csv
 │   └── max_PTS_of_year.csv
 ├── nba_analysis.py
 ├── requirements.txt
@@ -84,7 +85,7 @@ The script generates three CSV reports in the output directory:
 - `best_player.csv`
 - `max_PTS_of_year.csv`
 
-An example/reference team-scoring output from the supplied project archive is included as `outputs/max_PTS_of_year.csv`. It has not been independently regenerated because the raw input dataset was not supplied.
+Two reference outputs from the supplied project archive are included: `outputs/double_double.csv` and `outputs/max_PTS_of_year.csv`. They have not been independently regenerated because the raw input dataset was not supplied.
 
 ## Notebook
 
